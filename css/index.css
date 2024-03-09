@@ -1,0 +1,546 @@
+:root {
+    --whiteColor:#fff;
+    --textColor:#666;
+    --blackColor:#111;
+    --aquaColor:rgb(27, 211, 211);
+    --transition:0.3s;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+body {
+    min-height: 100vh;
+    background: #fff;
+    overflow-x: hidden;
+}
+html {
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+nav .logoAndLinks {
+    display: flex;
+}
+nav .logo i {
+    display: none;
+}
+.container nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 100px;
+}
+nav ul {
+    display: flex;
+    margin-top: 5px;
+    margin-left: 50px;
+}
+nav ul li {
+    margin-left: 25px;
+}
+nav ul li a {
+    font-size: 18px;
+    color: var(--textColor);
+    transition: var(--transition);
+}
+nav ul li a:hover,
+nav .login #login:hover {
+    color: var(--blackColor);
+}
+nav .login {
+    display: flex;
+    align-items: center;
+    gap: 0 25px;
+}
+.button {
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.button:hover,
+nav .login #signUp:hover,
+.landing .text button:hover,
+.landing form button:hover {
+    background-color: rgb(28, 176, 176);
+}
+nav .login #login {
+    background-color: transparent;
+    color: var(--textColor);
+    font-weight: 600;
+}
+nav .login #signUp {
+    background-color: var(--aquaColor);
+    color: var(--whiteColor);
+    font-weight: 600;
+}
+aside {
+    display: none;
+}
+
+/* Start Landing */
+.landing {
+    display: flex;
+    justify-content: space-around;
+    margin: 80px 0px;
+}
+.landing .text {
+    position: relative;
+    left: 10%;
+    top: 80px;
+}
+.landing .text h1 {
+    font-size: 65px;
+    color: #222;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+.landing .text p {
+    font-size: 18px;
+    color: var(--textColor);
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    margin-bottom: 35px;
+}
+.landing .text button {
+    background-color: var(--aquaColor);
+    color: #fff;
+    font-weight: 600;
+    width: 120px;
+    height: 40px;
+    transition: var(--transition);
+}
+.landing .image {
+    position: relative;
+    overflow: hidden;
+    left: 100px;
+}
+.landing .image img {
+    animation: 1.5s linear infinite ease-in-out;
+    animation-name: topDown;
+}
+.landing form {
+    position: absolute;
+    bottom: -200px;
+    background-color: rgb(40, 0, 82);
+    width: 70%;
+    height: 130px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+}
+.landing form input,
+.landing form button {
+    height: 45px;
+    transition: var(--transition);
+}
+.landing form input {
+    width: 450px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+}
+.landing form button {
+    width: 120px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--aquaColor);
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+/* End Landing */
+/* Start Advanced Articles */
+.advancedArticles {
+    width: 100%;
+    height: 700px;
+    background-color: #eee;
+    position: relative;
+    top: 50px;
+    z-index: -1;
+}
+.advancedArticles .title {
+    text-align: center;
+    position: relative;
+    top: 150px;
+}
+.advancedArticles .title h2 {
+    font-size: 42px;
+    color: #222;
+    margin-bottom: 15px;
+}
+.advancedArticles .title p {
+    font-size: 18px;
+    color: var(--textColor);
+    line-height: 1.4;
+}
+.advancedArticles .backLine {
+    width: 50%;
+    height: 5px;
+    background-color: var(--aquaColor);
+    position: relative;
+    left: 25%;
+    top: 300px;
+}
+.advancedArticles .boxes {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 200px;
+}
+.advancedArticles .boxes .box {
+    background-color: #fdfdfd;
+    padding: 20px;
+    position: relative;
+    border-radius: 6px;
+}
+.advancedArticles .boxes .box:nth-child(1) {
+    top: -30px;
+}
+.advancedArticles .boxes .box:nth-child(3) {
+    top: 30px;
+}
+.advancedArticles .boxes .box .img {
+    background-color: rgb(40, 0, 82);
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    top: -60px;
+}
+.advancedArticles .boxes .box h2 {
+    font-size: 25px;
+    color: #222;
+    position: relative;
+    top: -30px;
+}
+.advancedArticles .boxes .box p {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #666;
+    position: relative;
+    top: -20px;
+}
+/* End Advanced Articles */
+/* Start Boost Your Link */
+.boostLink {
+    background-color: rgb(40, 0, 82);
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden !important;
+}
+.boostLink h1 {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.boostLink button {
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    background-color: var(--aquaColor);
+    color: #fff;
+    font-weight: 600;
+}
+/* End Boost Your Link */
+/* Start footer */
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #111;
+    width: 100%;
+    height: 250px;
+    padding: 50px;
+}
+footer .links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 80px;
+}
+footer .links h3 {
+    color: #fff;
+    font-size: 22px;
+}
+footer .links li a {
+    color: #999;
+    font-size: 18px;
+    transition: 0.1s;
+}
+footer .links li a:hover {
+    color: var(--aquaColor);
+}
+footer .icons i {
+    margin-left: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.2s;
+}
+footer .icons i:hover {
+    color: var(--aquaColor);
+}
+#errorInput {
+    position: absolute;
+    margin-top: 80px;
+    left: 100px;
+    font-size: 14px;
+}
+/* End footer */
+
+/* Start animations */
+@keyframes topDown {
+    0% {
+        position: relative;
+        top: 0;
+    }
+    50% {
+        position: relative;
+        top: 10px;
+    }
+    100% {
+        position: relative;
+        top: 0;
+    }
+}
+/* End animations */
+
+/* Start Media Query for => (768px) */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    nav .login {
+        display: none;
+    }
+    nav .logo img {
+        position: relative;
+        left: -70px;
+    }
+    nav .logo i {
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    }
+    aside {
+        width: 50%;
+        height: 350px;
+        position: absolute;
+        top: 10px;
+        right: -50%;
+        display: none;
+        background-color: #111;
+        transition: 0.5s;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+    }
+    aside .xMark i {
+        font-size: 28px;
+        position: relative;
+        left: 10px;
+        top: 10px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    aside ul {
+        display: block;
+        position: relative;
+        top: 30px;
+        left: -20px;
+        text-align: center;
+    }
+    aside ul li {
+        margin: 10px 0;
+        background-color: var(--aquaColor);
+        border: 1px solid var(--aquaColor);
+        width: 136%;
+        padding: 5px;
+        position: relative;
+        left: -30px;
+        transition: 0.3s;
+    }
+    aside ul li:hover,
+    aside ul li a:hover {
+        background-color: transparent;
+        color: var(--aquaColor);
+    }
+    aside ul li a {
+        color: black;
+    }
+    aside .login {
+        display: block;
+        position: relative;
+        top: 50px;
+        left: 25%;
+    }
+    aside .login button {
+        margin: 10px 0;
+    }
+    aside .login #signUp {
+        color: black;
+        font-weight: normal;
+    }
+    aside .login #login {
+        color: #eee;
+        transition: 0.3s;
+    }
+    aside .login #login:hover {
+        color: var(--aquaColor);
+    }
+.landing {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -80px;
+}
+.landing .text {
+    position: relative;
+    left: 0;
+}
+.landing .text h1 {
+    font-size: 38px;
+    text-align: center;
+}
+.landing .text p {
+    text-align: center;
+    font-size: 17px;
+}
+.landing .text button {
+    position: absolute;
+    left: 35%;
+}
+.landing .image {
+    position: relative;
+    left: 0;
+    overflow:initial;
+    width: 100%;
+}
+.landing .image img {
+    position: relative;
+    top: 150px !important;
+    left: 15px;
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+    z-index: -1;
+}
+.landing form {
+    position: absolute;
+    left: 0%;
+    top: 143%;
+    width: 100%;
+    padding: 0 100px;
+    border-radius: 0;
+}
+.landing form input {
+    width: 300px;
+    height: 30px;
+    margin-right: 50px;
+    font-size: 16px;
+}
+.landing form button {
+    font-size: 16px;
+    height: 30px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.advancedArticles {
+    max-width: 100%;
+    height: 1200px;
+    position: relative;
+    left: 0;
+    top: 90px;
+}
+.advancedArticles .title {
+    top: 100px;
+}
+.advancedArticles .title h2 {
+    font-size: 32px;
+    text-align: center;
+}
+.advancedArticles .title p {
+    font-size: 17px;
+    text-align: center;
+}
+.advancedArticles .boxes {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-wrap: wrap;
+    width: 350px;
+    top: 28%;
+}
+.advancedArticles .backLine {
+    display: none;
+}
+.boostLink {
+    max-width: 100%;
+    height: 150px;
+    position: relative;
+    left: 0;
+    top: 100px;
+    border-radius: 0;
+}
+.boostLink h1 {
+    font-size: 25px;
+    text-align: center;
+}
+.boostLink button {
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    padding: 5px;
+}
+footer {
+    position: relative;
+    top: 100px;
+    width: 100% !important;
+    height: 350px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+footer .links {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0 80px;
+}
+footer .icons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* margin-right: -30px; */
+}
+footer .icons i {
+    margin: 10px 0;
+}
+}
+/* End Media Query */
